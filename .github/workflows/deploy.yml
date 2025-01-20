@@ -67,4 +67,4 @@ jobs:
           password: ${{ secrets.TILAA_PASSWORD }}
   
       - name: Deploy container
-        run: tilaa container modify --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} -i 248
+        run: tilaa container modify --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} -i 532
