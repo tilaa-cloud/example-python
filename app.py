@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Running for %d seconds" % (time.time() - now)
+    return "Hello stadslab! Running for %d seconds" % (time.time() - now)
 
 if __name__ == "__main__":
     now = time.time()
