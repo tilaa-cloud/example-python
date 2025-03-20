@@ -16,7 +16,6 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -67,4 +66,4 @@ jobs:
           password: ${{ secrets.TILAA_PASSWORD }}
   
       - name: Deploy container
-        run: tilaa container modify --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} -i 532
+        run: tilaa container modify --image ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ github.sha }} -i ${{ env.CONTAINER_ID }}
